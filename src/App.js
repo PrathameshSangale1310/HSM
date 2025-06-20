@@ -15,6 +15,7 @@ import './App.css';
 function App() {
   return (
     <>
+    <div className="main-wrapper">
       <Navbar />
       <main>
       <Routes>
@@ -32,6 +33,7 @@ function App() {
       </Routes>
       </main>
       <Footer />
+      </div>
     </>
   );
 }

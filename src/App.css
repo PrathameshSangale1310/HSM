@@ -1,15 +1,26 @@
-/* Navbar Base */
+/* === Navbar Base === */
 .navbar {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
-  transition: all 0.3s ease-in-out;
-  background: linear-gradient(to right, #160d28, #15081f);;
-  border: none !important;
+  background: transparent !important;
   box-shadow: none !important;
+  border: none !important;
+  padding: 0.5rem 1rem;
 }
 
+.navbar * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* === Logo === */
 .logo {
-  padding-left: 100px;
+  margin-right: auto;
+  padding-left: 125px;
 }
 
 .navbar-brand.logo img {
@@ -24,7 +35,12 @@
   }
 }
 
+/* === Toggler === */
+.navbar-toggler {
+  background: white;
+}
 
+/* === Nav Items === */
 .navbar-nav {
   display: flex;
   flex-wrap: wrap;
@@ -35,78 +51,27 @@
   position: relative;
 }
 
-.navbar-toggler {
-  background: white;
+.navbar .nav-link {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar .dropdown-toggle::after,
-.navbar-nav .dropdown-toggle::after,
-.no-caret::after {
+.navbar .nav-link:hover {
+  color: #82c9ee !important;
+  transform: scale(1.05);
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.3);
+}
+
+/* === Caret Removal === */
+.navbar .dropdown-toggle::after {
   display: none !important;
 }
 
-/* Desktop dropdown hover behavior */
-@media (min-width: 769px) {
-  .navbar-nav .dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    background: linear-gradient(45deg, black, transparent);
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    min-width: 180px;
-    padding: 10px 0;
-    /* margin-top: 8px; */
-    border-radius: 8px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(10px);
-  }
-}
-
-/* Mobile responsive dropdown */
-@media (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start !important;
-    padding-left: 1rem;
-    gap: 0.8rem;
-    
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: static;
-    float: none;
-    background-color: white;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .dropdown-menu.show {
-    display: block !important;
-    background: linear-gradient(45deg, black, transparent);
-
-  }
-
-  .dropdown-item {
-    padding: 0.5rem 1rem;
-    color: white;
-  }
-}
-
-/* Hover underline animation for nav links */
+/* === Hover underline animation === */
 .nav-link-hover {
   position: relative;
   font-weight: 500;
@@ -130,16 +95,74 @@
   transform: scaleX(1);
 }
 
+/* === Dropdown Menu === */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 180px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateY(10px);
+}
+
 .dropdown-item {
   padding: 0.5rem 1.2rem;
   transition: background 0.3s;
-  color: rgb(240, 238, 238);
+  color: black;
 }
 
 .dropdown-item:hover {
   background-color: #f1f1f1;
 }
 
+/* === Desktop Dropdown on Hover === */
+@media (min-width: 769px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(45deg, black, transparent);
+  }
+}
+
+/* === Mobile Dropdown === */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding-left: 1rem;
+    gap: 0.8rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    opacity: 1 !important;
+    transform: none !important;
+    /* background: linear-gradient(45deg, rgb(131, 128, 128), transparent); */
+    background: #4a00e0;
+  }
+
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+}
+
+/* === Hero Image Section === */
 .image-section {
   position: relative;
   width: 100%;
@@ -149,10 +172,10 @@
 
 .carousel-inner img {
   width: 100%;
-  height: 120dvh;
+  height: 100dvh;
   object-fit: cover;
   object-position: center;
-  transition: height 0.3s ease-in-out;
+  display: block;
 }
 
 @media (max-width: 992px) {
@@ -163,23 +186,6 @@
 
 @media (max-width: 576px) {
   .carousel-inner img {
-    height: 55vh;
+    height: 65vh;
   }
 }
-
-.navbar .nav-link {
-  font-family: ui-monospace;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #fff !important;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-  color: #82c9ee !important;
-  transform: scale(1.05);
-  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.3);
-}
-
-
