@@ -8,7 +8,7 @@ body {
 /* Contact Container */
 .contact-container {
   max-width: 600px;
-  margin: 1.5rem auto 1rem auto;
+  margin: 8rem auto 1rem auto;
   padding: 2.5rem;
   background: linear-gradient(135deg, #ffffff, #eef1ff);
   border-radius: 16px;
@@ -56,7 +56,6 @@ body {
   box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
 }
 
-/* Button Styling */
 .contact-form button {
   padding: 1rem;
   font-size: 1.05rem;
@@ -74,10 +73,9 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-container {
-    margin: 2rem 1rem;
+    margin-top: 1.5rem 1rem;
     padding: 2rem;
   }
 
@@ -97,7 +95,7 @@ body {
 
 @media (max-width: 1024px) {
   .contact-container {
-    margin: 3rem auto;
+    margin-top: 10rem;
     padding: 2rem 1.5rem;
     width: 90%;
   }
@@ -127,5 +125,25 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    margin-top: 6rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+  .contact-form {
+    gap: 1rem;
+  }
+   .contact-form button {
+    font-size: 0.8rem;
+  }
+  .contact-container h2 {
+    font-size: 0.9rem;
   }
 }

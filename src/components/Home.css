@@ -68,6 +68,7 @@
     object-fit: cover;
     object-position: center;
     display: block;
+    /* padding-top: 80px; */
   }
 
   .overlay h1 {
@@ -78,3 +79,7 @@
     font-size: 0.9rem;
   }
 }
+
+/* .studioimage {
+  padding-top: 80px;
+} */

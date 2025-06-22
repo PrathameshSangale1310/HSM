@@ -10,11 +10,11 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
+    const res = await fetch('https://hsm-pjpt.onrender.com/api/contact', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(form),
+});
     const data = await res.json();
     alert(data.message);
   };

@@ -8,7 +8,7 @@ function Home() {
         <img
           src="studio.jpeg"
           alt="Shelby Cobra"
-          className="responsive-image"
+          className="responsive-image studioimage"
         />
         {/* <div className="overlay">
           <h1>Shelby Cobra</h1>
