@@ -80,6 +80,40 @@
   }
 }
 
-/* .studioimage {
-  padding-top: 80px;
-} */
+.video-section {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0px;
+}
+
+.homepage-video {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .homepage-video {
+    max-height: 60vh;
+    border-radius: 0px;
+  }
+}
+
+/* Tablet-specific */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homepage-video {
+    max-height: 70vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage-video {
+    max-height: 90vh;
+  }
+}

@@ -52,7 +52,6 @@ function Navbar() {
         menu.classList.remove('show');
       });
 
-      // Collapse navbar on mobile
       const navbarCollapse = document.getElementById('navbarNavAlt');
       const isExpanded = navbarCollapse.classList.contains('show');
       if (isExpanded) {

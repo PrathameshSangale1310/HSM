@@ -3,41 +3,68 @@
   color: #fff;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+  margin-top: auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-top,
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  /* gap: 1rem; */
+  gap: 2rem;
 }
 
 .footer-logo img {
-  height: 40px;
+  height: 50px;
+  filter: brightness(1.1);
+}
+
+.address {
+  font-size: 13px;
+  color: #ccc;
+  max-width: 300px;
+}
+
+.address p {
+  margin: 3px 0;
+  line-height: 1.4;
 }
 
 .footer-links {
   display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 1.5rem;
+  gap: 8px;
 }
 
 .footer-links li {
   cursor: pointer;
 }
 
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00aaff;
+  text-decoration: underline;
+}
+
 .social-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .social-icons i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ccc;
+  transition: color 0.3s ease;
 }
 
 .social-icons i:hover {
@@ -45,12 +72,21 @@
 }
 
 .footer-divider {
-  border-color: #444;
-  margin: 1.5rem 0;
+  border-color: #333;
+  margin: 2rem 0 1.2rem;
+}
+
+.footer-bottom {
+  font-size: 0.8rem;
+  color: #aaa;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .feedback {
   margin-left: 1rem;
+  color: #00aaff;
+  cursor: pointer;
 }
 
 .region {
@@ -59,58 +95,127 @@
   gap: 0.5rem;
 }
 
-@media (max-width: 576px) {
-  .footer-wrapper {
-    padding: 1rem 0.5rem;
-    font-size: 0.7rem;
-  }
+.region i {
+  font-size: 1rem;
+}
 
-  .footer-logo img {
-    height: 30px;
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .footer-links {
-    gap: 0.8rem;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-logo img {
+    height: 40px;
   }
 
   .social-icons {
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 
   .social-icons i {
-    font-size: 0.9rem;
-  }
-
-  .footer-divider {
-    margin: 1rem 0;
+    font-size: 1.1rem;
   }
 
   .feedback {
-    margin-left: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+/* Tablet-specific enhancements */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal parts */
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+    align-self: start;
+  }
+
+  .address {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
   }
 
   .region {
-    gap: 0.3rem;
+    justify-content: center;
   }
 }
 
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+.address {
+    font-size: 11px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+
+.footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-left: 50px;
+  }
+
 }
 
-.footer-wrapper {
-  margin-top: auto; /* push to bottom */
-}
+@media (min-width: 1024px) {
+  .social-icons {
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-left: 50px;
+  }
 
-.footer-links a {
-  color: inherit; /* inherit the text-light color */
-  text-decoration: none; /* remove underline */
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #ccc; /* or any hover color you prefer */
-  text-decoration: underline;
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 100px;
+  }
 }

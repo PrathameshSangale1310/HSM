@@ -12,6 +12,16 @@ function Footer() {
         <img src="/logo.png" alt="Logo" />
       </div>
 
+    <div className='address'>
+      <p>Maharashtra Ex-Servicemen Corporation Ltd. Plot no-T158,</p>
+      <p>T-158 Internal Road, T-Block, MIDC, Chichwad,Pimpri-Chichwad</p>
+      <p>Maharashtra Pune-411026</p>
+      <p>India</p>
+      <br />
+      <p>020 2712 8267</p>
+      <p>infomail@hsmdesigns.in</p>
+    </div>
+
       <ul className="footer-links">
         <li><Link to='/about'>Who We Are</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>

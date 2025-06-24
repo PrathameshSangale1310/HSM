@@ -6,16 +6,16 @@ function Prototyping() {
       <div id="carouselExample" className="carousel slide">
   <div className="carousel-inner">
      <div className="carousel-item active">
-       <img src="/pt.jpeg" className="d-block w-100" alt="..."/>
+       <img src="/ptnew.jpeg" className="d-block w-100" alt="..."/>
      </div>
      <div className="carousel-item">
        <img src="/pt1.jpeg" className="d-block w-100" alt="..."/>
      </div>
      <div className="carousel-item">
-       <img src="/pt2.jpeg" className="d-block w-100" alt="..."/>
+       <img src="/pt2new.jpeg" className="d-block w-100" alt="..."/>
      </div>
      <div className="carousel-item">
-       <img src="/pt3.jpeg" className="d-block w-100" alt="..."/>
+       <img src="/pt3new.jpeg" className="d-block w-100" alt="..."/>
      </div>
    
    </div>
