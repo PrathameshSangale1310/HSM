@@ -10,10 +10,12 @@ function Home() {
           alt="Shelby Cobra"
           className="responsive-image studioimage"
         />
-        {/* <div className="overlay">
-          <h1>Shelby Cobra</h1>
-          <p>Classic performance and timeless design.</p>
-        </div> */}
+        <div className="overlay">
+          <h1>HSMDESIGNS</h1>
+          <h1>STUDIO</h1>
+          <p>HOME AWAY FROM HOME IS WHERE</p>
+          <h3>YOURS KNOWLEDGE INCREASED</h3>
+        </div>
       </div>
       <br />
 
@@ -23,10 +25,12 @@ function Home() {
           alt="Super Car"
           className="responsive-image"
         />
-        {/* <div className="overlay">
-          <h1>Supercar Showroom</h1>
-          <p>Experience the future of speed and design.</p>
-        </div> */}
+        <div className="clay">
+          <h1>OUR</h1>
+          <h1>CLAY LAB</h1>
+          <p>THE BEST PLACE</p>
+          <h3>FOR PROFESSIONALISM</h3>
+        </div>
       </div>
 
       <br />
@@ -36,10 +40,11 @@ function Home() {
           alt="Super Car"
           className="responsive-image"
         />
-        {/* <div className="overlay">
-          <h1>Supercar Showroom</h1>
-          <p>Experience the future of speed and design.</p>
-        </div> */}
+        <div className="bike">
+          <h1>OUR HAND MADE</h1>
+          <h1>MODELS</h1>
+          <h1>OUR PRIDE</h1>
+        </div>
       </div>
 
       <div className="video-section">

@@ -21,10 +21,10 @@
 
 .overlay {
   position: absolute;
-  top: 50%;
+  top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2vw 4vw;
   color: white;
@@ -33,13 +33,22 @@
 }
 
 .overlay h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  margin-bottom: 10px;
+  font-size: 47px;
+  margin-bottom: -11px;
+  font-weight: bold;
 }
 
-.overlay p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+.overlay h3 {
+  font-size: 20px;
+  margin-top: -20px;
+  font-weight: bold;
 }
+.overlay p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 
 @media (max-width: 992px) {
   .image-section {
@@ -55,6 +64,28 @@
   .overlay {
     padding: 1rem 2rem;
   }
+
+  .overlay p {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -2px;
+  }
+
+  .overlay {
+    top: 44%;
+  }
+
+  .overlay h1 {
+  font-size: 20px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.overlay h3 {
+  font-size: 11px;
+  margin-top: -17px;
+  font-weight: bold;
+}
 }
 
 @media (max-width: 576px) {
@@ -68,17 +99,32 @@
     object-fit: cover;
     object-position: center;
     display: block;
-    /* padding-top: 80px; */
-  }
-
-  .overlay h1 {
-    font-size: 1.2rem;
   }
 
   .overlay p {
-    font-size: 0.9rem;
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: -2px;
   }
+
+  .overlay {
+    padding: 0.5rem 1rem;
+    top: 45%;
+  }
+
+  .overlay h1 {
+  font-size: 11px;
+  margin-bottom: -2px;
+  font-weight: bold;
 }
+
+.overlay h3 {
+  font-size: 7px;
+  margin-top: -17px;
+  font-weight: bold;
+}
+}
+
 
 .video-section {
   width: 100%;
@@ -116,4 +162,211 @@
   .homepage-video {
     max-height: 90vh;
   }
+
+}
+
+.clay {
+  position: absolute;
+  top: 37%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 2vw 4vw;
+  color: white;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.clay h1 {
+  font-size: 47px;
+  margin-bottom: -11px;
+  font-weight: bold;
+}
+
+.clay h3 {
+  font-size: 20px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+.clay p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.clay h1 {
+  font-size: 47px;
+  margin-bottom: -11px;
+  font-weight: bold;
+}
+
+.clay h3 {
+  font-size: 20px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+.clay p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 576px) {
+  
+  .clay p {
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: 3px;
+    width: 86px;
+  }
+
+  .clay {
+    padding: 0.5rem;
+    top: 33%;
+    left: 76%;
+  }
+
+  .clay h1 {
+  font-size: 13px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.clay h3 {
+  font-size: 7px;
+  margin-top: -17px;
+  font-weight: bold;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .clay {
+    padding: 1rem 2rem;
+  }
+
+  .clay p {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -2px;
+  }
+
+  .clay {
+    top: 34%;
+    left: 66%;
+  }
+
+  .clay h1 {
+  font-size: 20px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.clay h3 {
+  font-size: 11px;
+  margin-top: -17px;
+  font-weight: bold;
+}
+}
+
+@media (min-width: 1024px) {
+  .clay {
+    padding: 1rem 2rem;
+    left: 69%;
+  }  
+}
+
+.bike {
+  position: absolute;
+  top: 37%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 2vw 4vw;
+  color: white;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.bike h1 {
+  font-size: 38px;
+  margin-bottom: -11px;
+  font-weight: bold;
+}
+
+.bike h3 {
+  font-size: 20px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+.bike p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 576px) {
+  
+  .bike p {
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: 3px;
+    width: 86px;
+  }
+
+  .bike {
+    padding: 0.5rem;
+    top: 16%;
+    left: 56%;
+  }
+
+  .bike h1 {
+  font-size: 13px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .bike {
+    padding: 1rem 2rem;
+  }
+
+  .bike p {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -2px;
+  }
+
+  .bike {
+    top: 12%;
+    left: 58%;
+  }
+
+  .bike h1 {
+  font-size: 16px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+}
+
+@media (min-width: 1024px) {
+  .bike {
+    /* padding: 1rem 2rem; */
+    left: 60%;
+    top: 15%;
+  }  
+}
+
+@media (max-width: 1024px) {
+  .bike {
+    font-size: 47px;
+    left: 60%;
+    top: 15%;
+  }  
 }
