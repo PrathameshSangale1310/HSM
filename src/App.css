@@ -281,11 +281,11 @@ body {
   }
 
   .navbar .nav-link {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 
   .dropdown-item {
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 
   .prototypingdef h1 {
