@@ -10,6 +10,7 @@ import Prototyping from './Services/Prototyping';
 import ShowModels from './Services/showModels';
 import Internship from './components/Internship';
 import Career from './components/Career';
+import Gallery from './components/Gallery';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Career />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/services/claymodelling" element={<ClayModelling />} />
         <Route path="/services/prototyping" element={<Prototyping />} />
         <Route path="/services/showmodels" element={<ShowModels />} />

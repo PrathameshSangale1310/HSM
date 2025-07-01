@@ -22,14 +22,18 @@ function Navbar() {
       const menu = dropdown.querySelector('.dropdown-menu');
 
       dropdown.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 991) {
         document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
           if (openMenu !== menu) openMenu.classList.remove('show');
         });
         menu.classList.add('show');
+      }
       });
 
       dropdown.addEventListener('mouseleave', () => {
-        menu.classList.remove('show');
+        if (window.innerWidth > 991) {
+          menu.classList.remove('show');
+        }
       });
     });
 
@@ -46,36 +50,60 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
-    const closeMenus = () => {
-      document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-        menu.classList.remove('show');
-      });
+    const isMobile = () => window.innerWidth <= 991;
 
-      const navbarCollapse = document.getElementById('navbarNavAlt');
-      const isExpanded = navbarCollapse.classList.contains('show');
-      if (isExpanded) {
-        const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-        if (bsCollapse) {
-          bsCollapse.hide();
+    const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+
+    const handleLinkClick = (e) => {
+      const parent = e.target.closest('.nav-item');
+      const hasDropdown = parent?.classList.contains('dropdown');
+      const dropdownMenu = parent?.querySelector('.dropdown-menu');
+
+      if (isMobile()) {
+        if (hasDropdown) {
+          if (dropdownMenu.classList.contains('show')) {
+            closeNavbar();
+          } else {
+            e.preventDefault();
+            e.stopPropagation();
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+              if (menu !== dropdownMenu) menu.classList.remove('show');
+            });
+            dropdownMenu.classList.add('show');
+          }
+        } else {
+          closeNavbar();
         }
       }
     };
 
-    dropdownItems.forEach(item => {
-      item.addEventListener('click', closeMenus);
+    const closeNavbar = () => {
+      const navbarCollapse = document.getElementById('navbarNavAlt');
+      const isExpanded = navbarCollapse.classList.contains('show');
+      if (isExpanded) {
+        const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+
+      document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    };
+
+    allNavLinks.forEach(link => {
+      link.addEventListener('click', handleLinkClick);
     });
 
     return () => {
-      dropdownItems.forEach(item => {
-        item.removeEventListener('click', closeMenus);
+      allNavLinks.forEach(link => {
+        link.removeEventListener('click', handleLinkClick);
       });
     };
   }, []);
 
   const navbarClass = `
     navbar navbar-expand-lg 
-    ${scrolled || isContactPage ? 'navbar-scrolled' : ''}
+    ${scrolled ? 'navbar-scrolled' : ''}
     ${isContactPage ? 'contact-navbar' : ''}
   `;
 
@@ -84,7 +112,7 @@ function Navbar() {
       <div className="container-fluid d-flex align-items-center justify-content-between">
         <Link className="navbar-brand logo" to="/">
           <img
-            src="/logopng.png"
+            src="/whitepng.png"
             alt="Logo"
             className="img-fluid"
             style={{ height: '60px', width: 'auto' }}
@@ -98,8 +126,8 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAlt">
           <ul className="navbar-nav align-items-left">
             <li className="nav-item dropdown mx-2">
-              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button" data-bs-toggle="dropdown">
-                HSM DESIGN ACADEMY
+              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
+                HSM Design Academy
               </Link>
               <ul className="dropdown-menu shadow-sm">
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/allcourses">All Courses</Link></li>
@@ -110,8 +138,8 @@ function Navbar() {
             </li>
 
             <li className="nav-item dropdown mx-2">
-              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button" data-bs-toggle="dropdown">
-                HSM DESIGN STUDIO
+              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
+                HSM Design Studio
               </Link>
               <ul className="dropdown-menu shadow-sm">
                 <li><Link className="dropdown-item" to="/hsmdesignstudio/services">Services</Link></li>
@@ -120,7 +148,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item dropdown mx-2">
-              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button" data-bs-toggle="dropdown">
+              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
                 Services
               </Link>
               <ul className="dropdown-menu shadow-sm">

@@ -18,6 +18,41 @@ function Home() {
         </div>
       </div>
       <br />
+      
+<div className="split-image-section">
+  <div className="split-image left">
+    <img src="/p1.jpeg" alt="Left" className="split-img" />
+    {/* <div className="split-caption">
+      <h2>LEFT SIDE</h2>
+      <p>Some text for the left image</p>
+    </div> */}
+  </div>
+  <div className="split-image right">
+    <img src="/p2.jpeg" alt="Right" className="split-img" />
+    {/* <div className="split-caption">
+      <h2>RIGHT SIDE</h2>
+      <p>Some text for the right image</p>
+    </div> */}
+  </div>
+</div>
+  <br />
+  <div className="split-image-section">
+  <div className="split-image left">
+    <img src="/p1.jpeg" alt="Left" className="split-img" />
+    {/* <div className="split-caption">
+      <h2>LEFT SIDE</h2>
+      <p>Some text for the left image</p>
+    </div> */}
+  </div>
+  <div className="split-image right">
+    <img src="/p2.jpeg" alt="Right" className="split-img" />
+    {/* <div className="split-caption">
+      <h2>RIGHT SIDE</h2>
+      <p>Some text for the right image</p>
+    </div> */}
+  </div>
+</div>
+<br />
 
       <div className="image-section">
         <img

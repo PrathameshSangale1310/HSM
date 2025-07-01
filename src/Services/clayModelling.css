@@ -1,0 +1,74 @@
+.carousel-inner img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+ 
+}
+
+@media (max-width: 992px) {
+  .carousel-inner img {
+    height: 75vh;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner img {
+    height: 45vh !important;
+    margin-top: 55px;
+  }
+}
+
+.prototypingdef {
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  z-index: 10;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 1.2s ease-in-out;
+  text-align: left;
+}
+
+.prototypingdef h1 {
+  font-size: 2.5vw;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .prototypingdef h1 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .prototypingdef {
+    top: 35% !important;
+    left: 10%;
+  }
+
+  .prototypingdef h1 {
+    font-size: 3.5vw !important;
+    text-align: left;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.claymod {
+  background-color: black !important;
+  background: black !important;
+}
