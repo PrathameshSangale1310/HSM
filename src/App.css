@@ -289,7 +289,7 @@ body {
   }
 
   .prototypingdef h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   .navbar-brand.logo img {
@@ -311,5 +311,24 @@ body {
 
   .dropdown-menu {
     min-width: 220px;
+  }
+  
+  .overlay {
+    top: 44%;
+  }
+
+  .overlay p, .clay {
+    margin-top: 1px;
+    top: 35% !important;
+    left: 63% !important;
+  }
+
+  .overlay h3, .clay h3 {
+    margin-top: -32px !important;
+  }
+
+  .clay p {
+    margin-top: 10px;
+    
   }
 }

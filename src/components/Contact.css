@@ -13,6 +13,7 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease-in-out;
+  margin-bottom: 30px;
 }
 
 .contact-container:hover {
@@ -92,7 +93,7 @@ body {
   .contact-container {
     margin-top: 10rem;
     padding: 2rem 1.5rem;
-    width: 90%;
+    width: 85%;
   }
 
   .contact-form {
@@ -139,5 +140,13 @@ body {
   }
   .contact-container h2 {
     font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1992px) {
+  .contact-container {
+    margin-top: 10rem;
+    padding: 2rem 1.5rem;
+    max-width: 50%;
   }
 }

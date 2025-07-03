@@ -195,6 +195,7 @@
     gap: 0.5rem;
     align-items: flex-start;
     padding-left: 50px;
+    font-size: 0.6rem;
   }
   
   .social-icons {
@@ -217,5 +218,17 @@
     gap: 0.5rem;
     align-items: flex-start;
     padding-left: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .social-icons {
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-left: 50px;
+  }
+
+  .footer-links {
+    font-size: 0.6rem;
   }
 }

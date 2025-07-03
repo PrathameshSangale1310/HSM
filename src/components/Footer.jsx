@@ -32,6 +32,7 @@ function Footer() {
         <i className="bi bi-facebook"></i>
         <i className="bi bi-youtube"></i>
         <i className="bi bi-instagram"></i>
+        <i className="bi bi-linkedin"></i>
       </div>
     </div>
 

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 
 function Home() {
+  const [leftImageIndex, setLeftImageIndex] = useState(0);
+  const leftImages = ["/home1.jpeg", "/home2.jpeg"]; // Add as needed
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLeftImageIndex(prev => (prev + 1) % leftImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home-container">
+      {/* First Image with Overlay */}
       <div className="image-section">
         <img
           src="studio.jpeg"
@@ -18,46 +29,34 @@ function Home() {
         </div>
       </div>
       <br />
-      
-<div className="split-image-section">
-  <div className="split-image left">
-    <img src="/p1.jpeg" alt="Left" className="split-img" />
-    {/* <div className="split-caption">
-      <h2>LEFT SIDE</h2>
-      <p>Some text for the left image</p>
-    </div> */}
-  </div>
-  <div className="split-image right">
-    <img src="/p2.jpeg" alt="Right" className="split-img" />
-    {/* <div className="split-caption">
-      <h2>RIGHT SIDE</h2>
-      <p>Some text for the right image</p>
-    </div> */}
-  </div>
-</div>
-  <br />
-  <div className="split-image-section">
-  <div className="split-image left">
-    <img src="/p1.jpeg" alt="Left" className="split-img" />
-    {/* <div className="split-caption">
-      <h2>LEFT SIDE</h2>
-      <p>Some text for the left image</p>
-    </div> */}
-  </div>
-  <div className="split-image right">
-    <img src="/p2.jpeg" alt="Right" className="split-img" />
-    {/* <div className="split-caption">
-      <h2>RIGHT SIDE</h2>
-      <p>Some text for the right image</p>
-    </div> */}
-  </div>
-</div>
-<br />
 
+      {/* Split Image Section with Left Image Changing */}
+      <div className="split-image-section">
+        <div className="split-image left fade-in-image">
+          <img src={leftImages[leftImageIndex]} alt="Left Changing" className="split-img" />
+        </div>
+        <div className="split-image right">
+          <img src="/home2.jpeg" alt="Right" className="split-img" />
+        </div>
+      </div>
+      <br />
+
+      {/* Second Static Split Section */}
+      <div className="split-image-section">
+        <div className="split-image left">
+          <img src="/home2.jpeg" alt="Left Static" className="split-img" />
+        </div>
+        <div className="split-image right">
+          <img src="/home2.jpeg" alt="Right Static" className="split-img" />
+        </div>
+      </div>
+      <br />
+
+      {/* Clay Lab Section */}
       <div className="image-section">
         <img
           src="studio2.jpeg"
-          alt="Super Car"
+          alt="Clay Lab"
           className="responsive-image"
         />
         <div className="clay">
@@ -67,12 +66,13 @@ function Home() {
           <h3>FOR PROFESSIONALISM</h3>
         </div>
       </div>
-
       <br />
+
+      {/* Models Section */}
       <div className="image-section">
         <img
           src="Duccati.jpeg"
-          alt="Super Car"
+          alt="Models"
           className="responsive-image"
         />
         <div className="bike">
@@ -82,41 +82,14 @@ function Home() {
         </div>
       </div>
 
+      {/* Background Video */}
       <div className="video-section">
-        <video
-          className="homepage-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
+        <video className="homepage-video" autoPlay muted loop playsInline>
           <source src="/ShelbyCLip.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
-
-    // <div id="carouselExample" className="carousel slide">
-    // <div className="carousel-inner">
-    //   <div className="carousel-item active">
-    //     <img src="studio.jpeg" className="d-block w-100" alt="..."/>
-    //   </div>
-    //   <div className="carousel-item">
-    //     <img src="studio2.jpeg" className="d-block w-100" alt="..."/>
-    //   </div>
-    //   <div className="carousel-item">
-    //     <img src="Duccati.jpeg" className="d-block w-100" alt="..."/>
-    //   </div>
-    // </div>
-    // <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    //   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    //   <span className="visually-hidden">Previous</span>
-    // </button>
-    // <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    //   <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    //   <span className="visually-hidden">Next</span>
-    // </button>
-    // </div>
   );
 }
 

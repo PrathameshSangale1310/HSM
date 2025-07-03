@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const isContactPage = location.pathname === '/contact';
+  const isLightNavbarPage = ['/contact', '/about'].includes(location.pathname);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -104,7 +104,7 @@ function Navbar() {
   const navbarClass = `
     navbar navbar-expand-lg 
     ${scrolled ? 'navbar-scrolled' : ''}
-    ${isContactPage ? 'contact-navbar' : ''}
+    ${isLightNavbarPage ? 'light-navbar' : ''}
   `;
 
   return (
@@ -112,7 +112,7 @@ function Navbar() {
       <div className="container-fluid d-flex align-items-center justify-content-between">
         <Link className="navbar-brand logo" to="/">
           <img
-            src="/whitepng.png"
+            src="/whitebglogo.png"
             alt="Logo"
             className="img-fluid"
             style={{ height: '60px', width: 'auto' }}
@@ -130,7 +130,7 @@ function Navbar() {
                 HSM Design Academy
               </Link>
               <ul className="dropdown-menu shadow-sm">
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/allcourses">All Courses</Link></li>
+                <li><Link className="dropdown-item" to="/hsmdesignacademy/allcourses">Courses</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/foundationcourses">Design Foundation Courses</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/learningresources">Teaching and Learning Resources</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/internship">Internship</Link></li>
