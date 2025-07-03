@@ -10,7 +10,7 @@ function Home() {
       setLeftImageIndex(prev => (prev + 1) % leftImages.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [leftImages.length]);
 
   return (
     <div className="home-container">
