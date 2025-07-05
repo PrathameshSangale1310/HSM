@@ -36,10 +36,9 @@
   margin-bottom: 1rem;
 }
 
-.image-section {
+.image-sections {
   width: 100%;
   margin-top: 2rem;
-  border-radius: 12px;
   overflow: hidden;
   /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); */
   display: flex;
@@ -49,7 +48,7 @@
   margin-bottom: 2rem;
 }
 
-.image-section img {
+.image-sections img {
   width: 100%;
   height: auto;
   max-height: 600px;
@@ -59,9 +58,9 @@
   margin-bottom: 2rem;
 }
 
-p {
+/* p {
     margin-bottom: -0.5rem;
-}
+} */
 
 .accordion {
     margin-top: 2rem;
@@ -102,7 +101,7 @@ p {
     font-size: 13px;
   }
 
-  .image-section {
-    margin-bottom: -2rem !important;
+  .image-sections {
+    margin-bottom: 0rem !important;
   }
 }

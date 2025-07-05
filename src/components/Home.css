@@ -538,9 +538,9 @@
   .overlay p,
   .clay p,
   .bike p {
-    font-size: 9px;
-    margin-top: 1px;
-    margin-bottom: -3px;
+    font-size: 9px !important;
+    margin-top: 1px !important;
+    margin-bottom: -3px !important;
   }
 }
 
@@ -586,8 +586,8 @@
   }
 
   .clay {
-    left: 67%;
-    top: 38%;
+    left: 72%;
+    top: 35%;
   }
 }
 

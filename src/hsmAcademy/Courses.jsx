@@ -25,7 +25,7 @@ function Courses() {
                     </div>
                 </div>
             </div>
-            <div className='image-section'>
+            <div className='image-sections'>
                 <img src="/sm1.jpeg" alt="" />
             </div>
 
