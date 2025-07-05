@@ -3,8 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const isLightNavbarPage = ['/contact', '/about'].includes(location.pathname);
+  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses'].includes(location.pathname);
+
   const [scrolled, setScrolled] = useState(false);
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(window.innerWidth <= 991);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +18,39 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsTabletOrSmaller(window.innerWidth <= 991);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const logoSrc =
+  isLightNavbarPage || isTabletOrSmaller
+    ? '/logopng.png'
+    : (scrolled ? '/logopng.png' : '/whitebglogo.png');
+
+
+  const navbarClass = `
+    navbar navbar-expand-lg 
+    ${scrolled ? 'navbar-scrolled' : ''}
+    ${isLightNavbarPage ? 'light-navbar' : ''}
+  `;
+
+  useEffect(() => {
     const dropdowns = document.querySelectorAll('.nav-item.dropdown');
 
     dropdowns.forEach(dropdown => {
       const menu = dropdown.querySelector('.dropdown-menu');
 
       dropdown.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 991) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-          if (openMenu !== menu) openMenu.classList.remove('show');
-        });
-        menu.classList.add('show');
-      }
+        if (window.innerWidth > 991) {
+          document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+            if (openMenu !== menu) openMenu.classList.remove('show');
+          });
+          menu.classList.add('show');
+        }
       });
 
       dropdown.addEventListener('mouseleave', () => {
@@ -51,7 +74,6 @@ function Navbar() {
 
   useEffect(() => {
     const isMobile = () => window.innerWidth <= 991;
-
     const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-item');
 
     const handleLinkClick = (e) => {
@@ -84,7 +106,6 @@ function Navbar() {
         const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
         if (bsCollapse) bsCollapse.hide();
       }
-
       document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
         menu.classList.remove('show');
       });
@@ -101,18 +122,12 @@ function Navbar() {
     };
   }, []);
 
-  const navbarClass = `
-    navbar navbar-expand-lg 
-    ${scrolled ? 'navbar-scrolled' : ''}
-    ${isLightNavbarPage ? 'light-navbar' : ''}
-  `;
-
   return (
     <nav className={navbarClass}>
       <div className="container-fluid d-flex align-items-center justify-content-between">
         <Link className="navbar-brand logo" to="/">
           <img
-            src="/whitebglogo.png"
+            src={logoSrc}
             alt="Logo"
             className="img-fluid"
             style={{ height: '60px', width: 'auto' }}
@@ -130,7 +145,7 @@ function Navbar() {
                 HSM Design Academy
               </Link>
               <ul className="dropdown-menu shadow-sm">
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/allcourses">Courses</Link></li>
+                <li><Link className="dropdown-item" to="/hsmdesignacademy/courses">Courses</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/foundationcourses">Design Foundation Courses</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/learningresources">Teaching and Learning Resources</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/internship">Internship</Link></li>

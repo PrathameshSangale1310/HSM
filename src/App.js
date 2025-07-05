@@ -11,6 +11,7 @@ import ShowModels from './Services/showModels';
 import Internship from './components/Internship';
 import Career from './components/Career';
 import Gallery from './components/Gallery';
+import Courses from './hsmAcademy/Courses';
 import './App.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/services/prototyping" element={<Prototyping />} />
         <Route path="/services/showmodels" element={<ShowModels />} />
         <Route path="/internship" element={<Internship />} />
+        <Route path="/hsmdesignacademy/courses" element={<Courses />} />
 
       </Routes>
       </main>
