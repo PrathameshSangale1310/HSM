@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
 
 function Home() {
-  const [leftImageIndex, setLeftImageIndex] = useState(0);
-  const leftImages = ["/home1.jpeg", "/home2.jpeg"]; // Add as needed
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLeftImageIndex(prev => (prev + 1) % leftImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [leftImages.length]);
 
   return (
     <div className="home-container">
       {/* First Image with Overlay */}
       <div className="image-section">
         <img
-          src="studio.jpeg"
+          src="2.jpg"
           alt="Shelby Cobra"
           className="responsive-image studioimage"
         />
@@ -31,39 +22,19 @@ function Home() {
       <br />
 
       {/* Split Image Section with Left Image Changing */}
-      <div className="split-image-section">
-        <div className="split-image left fade-in-image">
-          <img src={leftImages[leftImageIndex]} alt="Left Changing" className="split-img" />
-        </div>
-        <div className="split-image right">
-          <img src="/home2.jpeg" alt="Right" className="split-img" />
-        </div>
-      </div>
-      <br />
+      
 
-      {/* Second Static Split Section */}
-      <div className="split-image-section">
-        <div className="split-image left">
-          <img src="/home2.jpeg" alt="Left Static" className="split-img" />
-        </div>
-        <div className="split-image right">
-          <img src="/home2.jpeg" alt="Right Static" className="split-img" />
-        </div>
-      </div>
-      <br />
-
-      {/* Clay Lab Section */}
       <div className="image-section">
         <img
-          src="studio2.jpeg"
+          src="home1.jpg"
           alt="Clay Lab"
           className="responsive-image"
         />
         <div className="clay">
           <h1>OUR</h1>
           <h1>CLAY LAB</h1>
-          <p>THE BEST PLACE</p>
-          <h3>FOR PROFESSIONALISM</h3>
+          <p>THE BEST PLACE FOR</p>
+          <h3>PROFESSIONALISM</h3>
         </div>
       </div>
       <br />

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses'].includes(location.pathname);
+  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses','/hsmAcademy/c1'].includes(location.pathname);
 
   const [scrolled, setScrolled] = useState(false);
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(window.innerWidth <= 991);
@@ -140,7 +140,14 @@ function Navbar() {
 
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAlt">
           <ul className="navbar-nav align-items-left">
-            <li className="nav-item dropdown mx-2">
+            <li className="nav-item mx-2">
+              <Link className="nav-link nav-link-hover d-flex flex-column text-center" to="/hsmdesignacademy/courses">
+  HSMDA Courses
+ 
+</Link>
+
+            </li>
+            {/* <li className="nav-item dropdown mx-2">
               <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
                 HSM Design Academy
               </Link>
@@ -150,7 +157,7 @@ function Navbar() {
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/learningresources">Teaching and Learning Resources</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignacademy/internship">Internship</Link></li>
               </ul>
-            </li>
+            </li> */}
 
             <li className="nav-item dropdown mx-2">
               <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
@@ -176,6 +183,10 @@ function Navbar() {
 
             <li className="nav-item mx-2">
               <Link className="nav-link nav-link-hover" to="/gallery">Gallery</Link>
+            </li>
+
+            <li className="nav-item mx-2">
+              <Link className="nav-link nav-link-hover" to="/about">About Us</Link>
             </li>
 
             <li className="nav-item mx-2">

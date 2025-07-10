@@ -22,10 +22,10 @@
 .overlay {
   position: absolute;
   top: 37%;
-  left: 50%;
+  left: 88%;
   transform: translate(-50%, -50%);
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 2vw 4vw;
   color: white;
   border-radius: 10px;
@@ -33,20 +33,20 @@
 }
 
 .overlay h1 {
-  font-size: 47px;
+  font-size: 30px;
   margin-bottom: -11px;
   font-weight: bold;
 }
 
 .overlay h3 {
-  font-size: 20px;
+  font-size: 11px;
   margin-top: -20px;
   font-weight: bold;
 }
 .overlay p {
-  font-size: 20px;
+  font-size: 11px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 
@@ -62,28 +62,32 @@
   }
 
   .overlay {
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    top: 45%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    left: 50%;
   }
-
   .overlay p {
-    font-size: 11px;
+    font-size: 7px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 3px;
   }
 
   .overlay {
     top: 44%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .overlay h1 {
   font-size: 20px;
   margin-bottom: -7px;
   font-weight: bold;
+  
 }
 
 .overlay h3 {
-  font-size: 11px;
-  margin-top: -17px;
+  font-size: 7px;
+  margin-top: -18px;
   font-weight: bold;
 }
 }
@@ -102,14 +106,16 @@
   }
 
   .overlay p {
-    font-size: 7px;
-    font-weight: bold;
-    margin-top: -2px;
+    font-size: 7px !important;
+    font-weight: bold !important;
+    margin-top: -2px !important;
   }
 
   .overlay {
     padding: 0.5rem 1rem;
     top: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
   }
 
   .overlay h1 {
@@ -170,7 +176,7 @@
   transform: translate(-50%, -50%);
   text-align: left;
   padding: 2vw 4vw;
-  color: white;
+  color: dimgray;
   border-radius: 10px;
   max-width: 90%;
 }
@@ -194,17 +200,17 @@
 
 .clay h1 {
   font-size: 47px;
-  margin-bottom: -15px;
+  margin-bottom: -6px;
   font-weight: bold;
 }
 
 .clay h3 {
-  font-size: 20px;
+  font-size: 15px;
   margin-top: -20px;
   font-weight: bold;
 }
 .clay p {
-  font-size: 20px;
+  font-size: 13px;
   font-weight: bold;
   margin-top: 1px;
 }
@@ -213,27 +219,27 @@
 @media (max-width: 576px) {
   
   .clay p {
-    font-size: 7px;
+    font-size: 5px;
     font-weight: bold;
-    margin-top: 3px;
+    margin-top: 0px;
     width: 86px;
   }
 
   .clay {
     padding: 0.5rem;
-    top: 33%;
-    left: 76%;
+    top: 40%;
+    left: 73%;
   }
 
   .clay h1 {
-  font-size: 13px;
+  font-size: 7px;
   margin-bottom: -2px;
   font-weight: bold;
 }
 
 .clay h3 {
-  font-size: 7px;
-  margin-top: -17px;
+  font-size: 5px;
+  margin-top: -18px;
   font-weight: bold;
 }
 }
@@ -267,30 +273,36 @@
   font-weight: bold;
 }
 .overlay {
-    top: 48%;
-    left: 52%;
-    padding: 1rem 1.5rem;
+    top: 40%;
+    left: 88%;
+    /* padding: 1rem 1.5rem; */
   }
 
   .overlay h1 {
-    font-size: 22px;
-    margin-top: 4px;
+    font-size: 16px;
+    margin-top: 6px;
   }
 
   .overlay p,
   .overlay h3 {
-    font-size: 12px;
+    font-size: 6px;
   }
   .overlay p {
-    margin-top: 9px;
+    margin-bottom: 18px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .clay {
-    padding: 1rem 2rem;
-    left: 69%;
+    /* padding: 1rem 2rem; */
+    left: 91%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 44%;
   }  
+
+  .clay h1 {
+    font-size: 24px;
+  }
 }
 
 .bike {
@@ -546,7 +558,15 @@
 
 @media (min-width: 577px) and (max-width: 767px) {
  
-  .clay,
+  .clay {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    max-width: 90%;
+    text-align: left;
+  }
+
   .bike {
     top: 40%;
     left: 50%;
@@ -559,7 +579,7 @@
   
   .clay h1,
   .bike h1 {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: -3px;
     font-weight: bold;
   }
@@ -575,19 +595,19 @@
 
   .clay p,
   .bike p {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 0px;
   }
 
   .bike {
     left: 60%;
-    top: 15%;
+    top: 13%;
   }
 
   .clay {
-    left: 72%;
-    top: 35%;
+    left: 66%;
+    top: 37%;
   }
 }
 
@@ -604,3 +624,30 @@
     opacity: 1;
   }
 }
+
+
+@media (min-width: 1440px) {
+  .overlay h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .overlay h3 {
+    font-size: 15px;
+  }
+
+  .clay h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* @media (min-width: 576px) and (max-width: 768px) {
+
+  .overlay h1 {
+
+  }
+  
+} */

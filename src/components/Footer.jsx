@@ -9,7 +9,7 @@ function Footer() {
 
     <div className="footer-top">
       <div className="footer-logo">
-        <img src="/logo.png" alt="Logo" />
+        <img src="/whitebglogo.png" alt="Logo" />
       </div>
 
     <div className='address'>
