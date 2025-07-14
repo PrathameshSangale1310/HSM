@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function Courses() {
     const navigate = useNavigate();
     const opendesc = (id) => {
-  navigate(`/hsmAcademy/${id}`);
+  navigate(`/hsmAcademy/courses/${id}`);
 };
 
 
@@ -16,7 +16,7 @@ function Courses() {
 
       <div className="course-brief-container">
         <div className="course-image">
-          <img src="/sm1.jpeg" alt="Automotive Design" onClick={()=>opendesc('c1')} />
+          <img src="https://editorial.pxcrush.net/carsales/general/editorial/ge5712669977503080533.jpg?width=1024&height=682" alt="Automotive Design" onClick={()=>opendesc('c1')} />
         </div>
 
         <div className="course-text">
@@ -40,7 +40,7 @@ function Courses() {
         </div>
 
         <div className="course-text">
-          <h4 className="course-title">AUTOMOTIVE DESIGN & RESEARCH</h4>
+          <h4 className="course-title">DIGITAL DESIGN + CLAY SCULPTING AND PROTOTYPING</h4>
           <p>
             This program enables a candidate to become skillful in Automotive Design Process,
             Sketching and Automotive Digital Sculpting. Award winning designers have created
@@ -56,11 +56,11 @@ function Courses() {
 
       <div className="course-brief-container">
         <div className="course-image">
-          <img src="/c1.JPG" alt="Automotive Design" onClick={()=>opendesc('c1')}/>
+          <img src="https://cdn.prod.website-files.com/65a1b21a5fcbab501a6f2d5c/674ee56caafc86e1dceca8bc_66e320cf3c96122cfb4e0179_product%2520design.webp" alt="Automotive Design" onClick={()=>opendesc('c1')}/>
         </div>
 
         <div className="course-text">
-          <h4 className="course-title">AUTOMOTIVE DESIGN & RESEARCH</h4>
+          <h4 className="course-title">PRODUCT DESIGN RESEARCH AND DEVELOPMENT</h4>
           <p>
             This program enables a candidate to become skillful in Automotive Design Process,
             Sketching and Automotive Digital Sculpting. Award winning designers have created

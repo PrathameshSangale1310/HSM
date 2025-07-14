@@ -295,7 +295,7 @@
 @media (min-width: 992px) {
   .clay {
     /* padding: 1rem 2rem; */
-    left: 91%;
+    left: 89%;
     /* background-color: rgba(0, 0, 0, 0.5); */
     top: 44%;
   }  
@@ -534,6 +534,8 @@
 
   .overlay {
     top: 45%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0.3rem 0.8rem;
   }
 

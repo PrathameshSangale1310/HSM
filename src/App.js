@@ -12,8 +12,7 @@ import Internship from './components/Internship';
 import Career from './components/Career';
 import Gallery from './components/Gallery';
 import Courses from './hsmAcademy/Courses';
-import C1 from './hsmAcademy/c1'; // Capitalized for JSX usage
-
+import C1 from './hsmAcademy/courses/c1'
 import './App.css';
 
 function App() {
@@ -35,7 +34,7 @@ function App() {
         <Route path="/services/showmodels" element={<ShowModels />} />
         <Route path="/internship" element={<Internship />} />
         <Route path="/hsmdesignacademy/courses" element={<Courses />} />
-        <Route path="/hsmAcademy/c1" element={<C1 />} />
+        <Route path="/hsmAcademy/courses/c1" element={<C1 />} />
 
 
       </Routes>

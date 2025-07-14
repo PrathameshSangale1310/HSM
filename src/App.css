@@ -367,3 +367,14 @@ body {
     padding-top: 7px;
   }
 }
+
+@media (min-width: 1024px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+}

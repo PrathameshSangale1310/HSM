@@ -26,7 +26,7 @@ function Home() {
 
       <div className="image-section">
         <img
-          src="home1.jpg"
+          src="homenew.jpg"
           alt="Clay Lab"
           className="responsive-image"
         />
@@ -56,7 +56,7 @@ function Home() {
       {/* Background Video */}
       <div className="video-section">
         <video className="homepage-video" autoPlay muted loop playsInline>
-          <source src="/ShelbyCLip.mp4" type="video/mp4" />
+          <source src="/ShelbyClip.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

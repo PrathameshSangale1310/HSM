@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses','/hsmAcademy/c1'].includes(location.pathname);
+  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses','/hsmAcademy/courses/c1'].includes(location.pathname);
 
   const [scrolled, setScrolled] = useState(false);
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(window.innerWidth <= 991);
@@ -17,14 +17,24 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsTabletOrSmaller(window.innerWidth <= 991);
-    };
+ useEffect(() => {
+  const handleResize = () => {
+    setIsTabletOrSmaller(window.innerWidth <= 991);
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    // force Bootstrap collapse to behave correctly on "desktop site" mode
+    const navbarCollapse = document.getElementById('navbarNavAlt');
+    const isDesktopWidth = window.innerWidth >= 1024;
+    const bsCollapse = window.bootstrap?.Collapse.getInstance(navbarCollapse);
+
+    if (isDesktopWidth && navbarCollapse && bsCollapse) {
+      bsCollapse.show(); // ensure it's open
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
 
   const logoSrc =
   isLightNavbarPage || isTabletOrSmaller
