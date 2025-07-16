@@ -1,6 +1,6 @@
 .about-container {
   /* padding: clamp(2rem, 4vw, 5rem) clamp(1rem, 5vw, 8rem); */
-  background-color: #f8f9fa; /* subtle gray background */
+  /* background-color: #f8f9fa; */
   color: #333;
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.7;
@@ -62,4 +62,10 @@
 
 .light-navbar .dropdown-item:hover {
   background-color: #f8f9fa;
+}
+
+.about img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
 }

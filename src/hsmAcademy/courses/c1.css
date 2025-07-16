@@ -172,3 +172,10 @@
   padding: 2rem;
 }
 }
+
+
+@media (min-width: 1200px) {
+  .c-desc {
+  font-size: 2.5rem;
+}
+}

@@ -17,6 +17,12 @@ function About() {
             nurturing the next generation of design professionals.
         </p>
       </div>
+      <div className='about'>
+        <img className='my-2' src="/s4.jpg" alt="Banner" />
+        <img className='my-2' src="/s5.jpeg" alt="Banner" />
+        <img className='my-2' src="/s6.jpeg" alt="Banner" />
+        <img className='my-2' src="/s7.jpeg" alt="Banner" />
+      </div>
 
       <div className="about-section">
         <h2 className="sub-title">Design Studio</h2>

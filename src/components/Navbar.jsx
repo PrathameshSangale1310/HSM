@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses','/hsmAcademy/courses/c1'].includes(location.pathname);
+  const isLightNavbarPage = ['/contact', '/about','/hsmdesignacademy/courses','/hsmAcademy/courses/c1', '/hsmdesignstudio/ourservices'].includes(location.pathname);
 
   const [scrolled, setScrolled] = useState(false);
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(window.innerWidth <= 991);
@@ -157,24 +157,12 @@ function Navbar() {
 </Link>
 
             </li>
-            {/* <li className="nav-item dropdown mx-2">
-              <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
-                HSM Design Academy
-              </Link>
-              <ul className="dropdown-menu shadow-sm">
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/courses">Courses</Link></li>
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/foundationcourses">Design Foundation Courses</Link></li>
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/learningresources">Teaching and Learning Resources</Link></li>
-                <li><Link className="dropdown-item" to="/hsmdesignacademy/internship">Internship</Link></li>
-              </ul>
-            </li> */}
-
             <li className="nav-item dropdown mx-2">
               <Link className="nav-link dropdown-toggle nav-link-hover" to="#" role="button">
                 HSM Design Studio
               </Link>
               <ul className="dropdown-menu shadow-sm">
-                <li><Link className="dropdown-item" to="/hsmdesignstudio/services">Services</Link></li>
+                <li><Link className="dropdown-item" to="/hsmdesignstudio/ourservices">Services</Link></li>
                 <li><Link className="dropdown-item" to="/hsmdesignstudio/projects">Own Projects</Link></li>
               </ul>
             </li>
@@ -184,7 +172,6 @@ function Navbar() {
                 Services
               </Link>
               <ul className="dropdown-menu shadow-sm">
-                <li><Link className="dropdown-item" to="/services/overalldesign">Overall Design Process</Link></li>
                 <li><Link className="dropdown-item" to="/services/claymodelling">Clay Modelling</Link></li>
                 <li><Link className="dropdown-item" to="/services/prototyping">Prototyping</Link></li>
                 <li><Link className="dropdown-item" to="/services/showmodels">Show Models</Link></li>
